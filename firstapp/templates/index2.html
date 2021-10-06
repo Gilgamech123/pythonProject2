@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Add</title>
+</head>
+<body >
+    <div class="header">
+        <ul>
+            <a href="index.html"><li class="header-1"> Выход</li></a>
+            <li class="header-2"  align="center">Новая задача</li>
+            <li class="header-3" align="center">СЕГОДНЯ <p  class = "time" id="current_date_time_block"> </p></li>
+        </ul>
+        <div class="content1">
+            <form action="/add.php" method="post" class="form2">
+                <p class = "str1"><b>Название:</b>
+                <input type = "text" name ="task" id="task">
+                <p class = "str2"><b>Дата завершения:</b>
+                <input type = "date" id="date" name="date">
+            </form>
+            <div class="bt">
+            <form>
+                 <button class="button1">Добавить</button>
+            </form>
+            </div>
+
+        </div>
+    </div>
+    <div ></div>
+
+<script type="text/javascript">
+
+
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+
+        return day+"."+month+"."+year;
+    }
+
+
+    document.getElementById('current_date_time_block').innerHTML = date_time();
+</script>
+ 
+
+</body>
+</html>
