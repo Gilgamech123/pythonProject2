@@ -23,7 +23,7 @@ position:fixed ;
     }
 .header-3{
     background-color:WhiteSmoke;
-    height: 40px;
+    height: 50px;
     width: 180px;
     font-size: 20px;
     margin-left: 1300px;
@@ -50,6 +50,7 @@ li {
     border-radius: 20px;
 
 
+
 }
 .time{
     margin-top: -6px;
@@ -57,7 +58,7 @@ li {
 }
 .button{
     background-color: red;
-    position: fixed;
+    position: relative;
     height: 50px;
     width: 170px;
     border-radius: 20px;
@@ -68,13 +69,14 @@ li {
 }
 .button1{
     background-color: red;
+    position: relative;
     border-radius: 20px;
     height: 50px;
     width: 170px;
     font-size: 25px;
     color: white;
     margin-top: 470px;
-    margin-left: 280px;
+    margin-left: 750px;
 }
 .form1{
 
@@ -161,4 +163,7 @@ color: dodgerblue;
 .signin {
 background-color: #f1f1f1;
 text-align: center;
+}
+.success{
+background-color:green;
 }

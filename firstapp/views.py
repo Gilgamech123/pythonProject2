@@ -1,11 +1,18 @@
 from django.shortcuts import render
 from django.views import View
+from django.utils import timezone
+from .basa import *
 from django.http import HttpResponseRedirect
 
 
 class MainPage(View):
     def get(self, request):
-        context = {}
+        date_today = timezone.now()
+        info = get_material()
+        context = {
+            'date_today': date_today,
+            'info': info
+        }
         return render(request, 'index.html', context=context)
 
 class FirstSecond(View):
