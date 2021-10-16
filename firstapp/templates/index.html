@@ -1,9 +1,11 @@
-{% load static %}
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_string.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -19,16 +21,18 @@
                  <button class="button1">Добавить</button>
             </form>
         <div class="content">
-            {% for inf in info%}
-            {% include 'string.html'%}
-            {%endfor%}
+            {% for inf in info %}
+
+            {% include 'string.html' %}
+
+            {% endfor %}
 
         </div>
 
         </div>
     </div>
 
-    <div ></div>
+
 
 
 

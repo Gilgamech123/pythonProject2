@@ -5,7 +5,12 @@ from .basa import *
 from django.http import HttpResponseRedirect
 
 
-class MainPage(View):
+#class MainPage(View):
+  #  def get(self, request):
+   #     context = {}
+    #    return render(request, '', context=context)
+
+class FirstSecond(View):
     def get(self, request):
         date_today = timezone.now()
         info = get_material()
@@ -13,11 +18,6 @@ class MainPage(View):
             'date_today': date_today,
             'info': info
         }
-        return render(request, 'index.html', context=context)
-
-class FirstSecond(View):
-    def get(self, request):
-        context = {}
         return render(request, 'index.html', context=context)
 
 class PageSecond(View):
