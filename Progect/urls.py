@@ -20,8 +20,8 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', FirstSecond.as_view()),
-    path('index.html', FirstSecond.as_view()),
+    path('', PageThree.as_view()),
+    path('index.html', MainPage.as_view()),
     path('index2.html', PageSecond.as_view()),
     path('login.html', PageThree.as_view()),
 
